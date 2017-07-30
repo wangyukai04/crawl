@@ -13,6 +13,7 @@ module.exports = function (url, cb) {
                    name:$this.text(),
                    url:$this.attr("href")
                };
+               console.log("read movie:" + movie.name);
                movies.push(movie)
            });
            cb(null,movies);
@@ -20,6 +21,7 @@ module.exports = function (url, cb) {
    })
 };
 
+/*
 module.exports("http://top.baidu.com/buzz?b=26&c=1&fr=topcategory_c1&qq-pf-to=pcqq.group",function (err, movies) {
     console.log(movies);
-});
+});*/
